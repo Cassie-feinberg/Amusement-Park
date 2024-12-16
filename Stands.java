@@ -13,4 +13,14 @@ public class Stands extends FoodSpots {
     public void setSnacksOnly(boolean snacksOnly) {
         this.snacksOnly = snacksOnly;
     }
+
+    @Override
+    public String toString() {
+        return ("Food Stand " + name + " serves " + cuisine + " food, the price ranges from $" + cheapestItem + " to $" + mostExpensiveItem + ". It is open from " + hours + ".");
+    }
+
+    public static void main(String[] args){
+        Stands Marians= new Stands("Pablos", true, "Mexican", 2.99, 23.55, "9:30 AM to 8 PM", false);
+        System.out.println( Marians.toString());
+    }
 }

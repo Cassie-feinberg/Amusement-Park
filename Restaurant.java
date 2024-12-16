@@ -34,4 +34,14 @@ public class Restaurant extends FoodSpots {
         this.vipOnly = vipOnly;
     }
 
+    @Override
+    public String toString() {
+        return ("Restaurant " + name + " serves " + cuisine + " food, the price ranges from $" + cheapestItem + " to $" + mostExpensiveItem + ". It is open from " + hours + ". It has a wait time of " +waitTime+" minutes. The restaurant has " + numTables + " tables and the tables are open? "+hasTables+". And the restaurant is VIP only? "+vipOnly);
+    }
+
+    public static void main(String[] args){
+        Restaurant Marians= new Restaurant("Marians", true, "Italian", 6.57, 37.45, "9 AM to 10 PM", 17,15,false);
+        System.out.println( Marians.toString());
+    }
+
 }
