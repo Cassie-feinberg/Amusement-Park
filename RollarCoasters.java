@@ -28,6 +28,6 @@ public class RollarCoasters extends Rides{
     }
 
     public static void main(String[] args){
-
+        RollarCoasters zoomingMountain = new RollarCoasters("Zooming Mountain", 12, 54, 5, true, 45, 200, 10);
     }
 }
