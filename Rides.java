@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Rides {
     protected String name;
     protected final int ageLimit;
-    private final int heightLimit;
+    private final int heightLimit;// in inches
     private int cost;
     private boolean working;
     private int waitTime;
@@ -54,7 +54,7 @@ public class Rides {
     }
 
     public String toString(){
-        return getName() + " has a height limit of "+ getHeightLimit() + " and an age limit of "+ getAgeLimit();
+        return getName() + " has a height limit of "+ getHeightLimit() + " inches, and an age limit of "+ getAgeLimit();
     }
 
     public String makeNoise(){

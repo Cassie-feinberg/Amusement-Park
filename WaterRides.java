@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class WaterRides extends Rides{
 
-    private int splashScale;
-    private boolean raincoat;
+    private int splashScale; // on a scale of 1-10
+    private boolean raincoat; // If they have any raincoats available or not
 
     public WaterRides(String name, int ageLimit, int heightLimit, int cost, boolean working, int waitTime, int splashScale, boolean raincoat) {
         super(name, ageLimit, heightLimit, cost, working, waitTime);
