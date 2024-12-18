@@ -1,9 +1,9 @@
 public class Restaurant extends FoodSpots {
     private int numTables;
-    private double waitTime;
+    private int waitTime;
     private boolean vipOnly;
 
-    public Restaurant(String name, boolean hasTables, String cuisine, double cheapestItem, double mostExpensiveItem, String hours, int numTables, double waitTime, boolean vipOnly) {
+    public Restaurant(String name, boolean hasTables, String cuisine, double cheapestItem, double mostExpensiveItem, String hours, int numTables, int waitTime, boolean vipOnly) {
         super(name, true, cuisine, cheapestItem, mostExpensiveItem, hours);
         this.numTables = numTables;
         this.waitTime = waitTime;
@@ -18,11 +18,11 @@ public class Restaurant extends FoodSpots {
         this.numTables = numTables;
     }
 
-    public double getWaitTime() {
+    public int getWaitTime() {
         return waitTime;
     }
 
-    public void setWaitTime(double waitTime) {
+    public void setWaitTime(int waitTime) {
         this.waitTime = waitTime;
     }
 
@@ -41,7 +41,11 @@ public class Restaurant extends FoodSpots {
 
     public static void main(String[] args){
         Restaurant Marians= new Restaurant("Marians", true, "Italian", 6.57, 37.45, "9 AM to 10 PM", 17,15,false);
-        System.out.println( Marians.toString());
+        Restaurant chinese= new Restaurant("Yummies", true, "Chinese", 4.22, 40, "7 AM to 10 PM", 30,30,false);
+        Restaurant french = new Restaurant("Francois et Bruno", false, "French", 20, 110.45, "5PM to 1 AM", 5,40,true);
+        Restaurant[] restaurant = new Restaurant[]{Marians, chinese, french};
+
+        System.out.println(Marians.toString());
     }
 
 }

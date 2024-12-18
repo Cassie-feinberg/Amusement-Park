@@ -63,6 +63,14 @@ public class FoodSpots {
         System.out.println("We are out of " + item);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String toString(){
         return (name + " serves " + cuisine + " food, the price ranges from $" + cheapestItem + " to $" + mostExpensiveItem + ". It is open from " + hours + ". It has tables? " + hasTables);
     }
