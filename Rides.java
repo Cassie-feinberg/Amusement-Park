@@ -60,4 +60,20 @@ public class Rides {
     public String makeNoise(){
         return "Weeeeeee!";
     }
+
+    public static void main(String[] args){
+        ArrayList<String> rides = new ArrayList<String>();
+
+        Rides teacup = new Rides("Teacup Spin Time", 2, 31, 2, true, 20);
+        rides.add("Teacup Spin Time");
+        Rides carousel = new Rides("Whirligig", 2, 31, 2, false, 0);
+        rides.add("Whirligig");
+        Rides ferrisWheel = new Rides("Big Zero", 0, 0, 10, true, 40);
+        rides.add("Big Zero");
+
+
+        System.out.println(teacup);
+        System.out.println(rides);
+        System.out.println(ferrisWheel.makeNoise());
+    }
 }
