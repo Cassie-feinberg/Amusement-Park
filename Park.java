@@ -78,7 +78,7 @@ public class Park {
                         System.out.println("You are not old enough to ride this, Sorry!");
                     }
                     else {
-                        rollerCoasters[randomIndex].makeNoise();
+                        System.out.println(rollerCoasters[randomIndex].makeNoise());
                     }
                 }
                 else if (ride.equals("2")){
@@ -91,7 +91,7 @@ public class Park {
                         System.out.println("You are not old enough to ride this, Sorry!");
                     }
                     else {
-                        waterRides[randomIndex].makeNoise();
+                        System.out.println(waterRides[randomIndex].makeNoise());
                     }
                 }
                 else {
@@ -104,7 +104,7 @@ public class Park {
                         System.out.println("You are not old enough to ride this, Sorry!");
                     }
                     else {
-                        rides[randomIndex].makeNoise();
+                        System.out.println(rides[randomIndex].makeNoise());
                     }
                 }
             }
