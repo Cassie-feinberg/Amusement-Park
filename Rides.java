@@ -61,15 +61,4 @@ public class Rides {
         return "Weeeeeee!";
     }
 
-    public static void main(String[] args){
-        Rides teacup = new Rides("Teacup Spin Time", 2, 31, 2, true, 20);
-        Rides carousel = new Rides("Whirligig", 2, 31, 2, false, 0);
-        Rides ferrisWheel = new Rides("Big Zero", 0, 0, 10, true, 40);
-        Rides[] rides = new Rides[]{teacup, carousel, ferrisWheel};
-
-
-        System.out.println(teacup);
-        System.out.println(rides);
-        System.out.println(ferrisWheel.makeNoise());
-    }
 }

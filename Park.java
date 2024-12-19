@@ -9,9 +9,15 @@ public class Park {
         Restaurant french = new Restaurant("Francois et Bruno", false, "French", 20, 110.45, "5PM to 1 AM", 5,40,true);
         Restaurant[] restaurants = new Restaurant[]{Marians, chinese, french};
 
-        Stands[] stands = new Stands[]{};
+        Stands Pablos = new Stands("Pablos", false, "Mexican", 2.99, 23.55, "9:30 AM - 8PM", false);
+        Stands Gyros = new Stands("Gyros", true, "Greek", 4.75, 32.55, "10:30 AM - 6PM", false);
+        Stands Mikes = new Stands("Mikes", true, "Burger", 1.50, 25.75, "8AM to 8PM", true);
+        Stands[] stands = new Stands[]{Pablos, Gyros, Mikes};
 
-        FoodSpots[] foodSpots = new FoodSpots[]{};
+        FoodSpots snackStand = new FoodSpots("Snackles", false, "snacks", 0.50, 5, "12AM - 12AM");
+        FoodSpots bar = new FoodSpots("Twenty One", true, "bar", 3, 30, "9PM - 4AM");
+        FoodSpots dessert = new FoodSpots("Sprinkles", true, "desserts", 5, 16, "12PM - 5PM");
+        FoodSpots[] foodspots = new FoodSpots[]{snackStand, bar, dessert};
 
         RollarCoasters zoomingMountain = new RollarCoasters("Zooming Mountain", 12, 54, 5, true, 45, 200, 10);
         RollarCoasters dash = new RollarCoasters("Dash", 4, 36, 4, true, 2, 8, 0);
@@ -55,8 +61,8 @@ public class Park {
                     System.out.println(stands[randomIndex]);
                 }
                 else {
-                    System.out.println("We are going to " + foodSpots[randomIndex].getName());
-                    System.out.println(foodSpots[randomIndex]);
+                    System.out.println("We are going to " + foodspots[randomIndex].getName());
+                    System.out.println(foodspots[randomIndex]);
                 }
             }
             else if (place.equals("2")){
@@ -71,6 +77,9 @@ public class Park {
                     if (rollerCoasters[randomIndex].getAgeLimit() > age){
                         System.out.println("You are not old enough to ride this, Sorry!");
                     }
+                    else {
+                        rollerCoasters[randomIndex].makeNoise();
+                    }
                 }
                 else if (ride.equals("2")){
                     System.out.println("We are going to go ride " + waterRides[randomIndex].getName());
@@ -81,6 +90,9 @@ public class Park {
                     if (waterRides[randomIndex].getAgeLimit() > age){
                         System.out.println("You are not old enough to ride this, Sorry!");
                     }
+                    else {
+                        waterRides[randomIndex].makeNoise();
+                    }
                 }
                 else {
                     System.out.println("We are going to go ride " + rides[randomIndex].getName());
@@ -90,6 +102,9 @@ public class Park {
                     }
                     if (rides[randomIndex].getAgeLimit() > age){
                         System.out.println("You are not old enough to ride this, Sorry!");
+                    }
+                    else {
+                        rides[randomIndex].makeNoise();
                     }
                 }
             }

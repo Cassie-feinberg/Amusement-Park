@@ -39,13 +39,4 @@ public class Restaurant extends FoodSpots {
         return ("Restaurant " + name + " serves " + cuisine + " food, the price ranges from $" + cheapestItem + " to $" + mostExpensiveItem + ". It is open from " + hours + ". It has a wait time of " +waitTime+" minutes. The restaurant has " + numTables + " tables and the tables are open? "+hasTables+". And the restaurant is VIP only? "+vipOnly);
     }
 
-    public static void main(String[] args){
-        Restaurant Marians= new Restaurant("Marians", true, "Italian", 6.57, 37.45, "9 AM to 10 PM", 17,15,false);
-        Restaurant chinese= new Restaurant("Yummies", true, "Chinese", 4.22, 40, "7 AM to 10 PM", 30,30,false);
-        Restaurant french = new Restaurant("Francois et Bruno", false, "French", 20, 110.45, "5PM to 1 AM", 5,40,true);
-        Restaurant[] restaurant = new Restaurant[]{Marians, chinese, french};
-
-        System.out.println(Marians.toString());
-    }
-
 }

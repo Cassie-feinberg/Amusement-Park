@@ -79,13 +79,4 @@ public class FoodSpots {
         return (item.length());
     }
 
-    public static void main(String[] args){
-        FoodSpots snackStand = new FoodSpots("Snackles", false, "snacks", 0.50, 5, "12AM - 12AM");
-        FoodSpots bar = new FoodSpots("Twenty One", true, "bar", 3, 30, "9PM - 4AM");
-        FoodSpots dessert = new FoodSpots("Sprinkles", true, "desserts", 5, 16, "12PM - 5PM");
-        FoodSpots[] foodspots = new FoodSpots[]{snackStand, bar, dessert};
-
-        System.out.println(snackStand);
-
-    }
 }
