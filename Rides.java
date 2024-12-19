@@ -69,6 +69,7 @@ public class Rides {
 
 
         System.out.println(teacup);
+        System.out.println(rides);
         System.out.println(ferrisWheel.makeNoise());
     }
 }
