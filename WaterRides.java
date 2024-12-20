@@ -10,7 +10,7 @@ public class WaterRides extends Rides{
         this.splashScale = splashScale;
         this.raincoat = raincoat;
     }
-
+    // getters and setters for each variable
     public boolean hasRaincoat() {
         return raincoat;
     }
@@ -24,9 +24,16 @@ public class WaterRides extends Rides{
         return "The splash scale of " + getName() + " is "+ getSplashScale();
     }
 
+    // polymorphic method
     @Override
     public String makeNoise() {
         return "Splash!!!!";
     }
 
+    // test code
+    public static void main(String[] args){
+        WaterRides splat = new WaterRides("Splat", 16, 60, 10, true, 30, 8, true);
+        System.out.println(splat);
+        System.out.println(splat.makeNoise());
+    }
 }

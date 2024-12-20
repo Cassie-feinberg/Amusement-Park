@@ -10,7 +10,7 @@ public class RollarCoasters extends Rides{
         this.heightOfRide = heightOfRide;
         this.thrillScale = thrillScale;
     }
-
+    // getters and setters for each variable
     public int getThrillScare() {
         return thrillScale;
     }
@@ -23,8 +23,15 @@ public class RollarCoasters extends Rides{
         return heightOfRide;
     }
 
+    // polymorphic method
     public String makeNoise(){
         return "Ahhhhhhhh!";
     }
 
+    // test code
+    public static void main(String[] args){
+        RollarCoasters dash = new RollarCoasters("Dash", 4, 36, 4, true, 2, 8, 0);
+        System.out.println(dash);
+        System.out.println(dash.makeNoise());
+    }
 }

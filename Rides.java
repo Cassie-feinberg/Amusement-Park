@@ -17,6 +17,7 @@ public class Rides {
         this.waitTime = waitTime;
     }
 
+    // getters and setters for each variable
     public String getName(){
         return name;
     }
@@ -57,8 +58,15 @@ public class Rides {
         return getName() + " has a height limit of "+ getHeightLimit() + " inches, and an age limit of "+ getAgeLimit();
     }
 
+    // polymorphic method
     public String makeNoise(){
         return "Weeeeeee!";
     }
 
+    // test code
+    public static void main(String[] args){
+        Rides teacup = new Rides("Teacup Spin Time", 2, 31, 2, true, 20);
+        System.out.println(teacup);
+        System.out.println(teacup.makeNoise());
+    }
 }

@@ -4,6 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 public class Park {
     public static void main(String[] args){
+
+        // creating 3 variable arrays for each class and subclass
         Restaurant Marians= new Restaurant("Marians", true, "Italian", 6.57, 37.45, "9 AM to 10 PM", 17,15,false);
         Restaurant chinese= new Restaurant("Yummies", true, "Chinese", 4.22, 40, "7 AM to 10 PM", 30,30,false);
         Restaurant french = new Restaurant("Francois et Bruno", false, "French", 20, 110.45, "5PM to 1 AM", 5,40,true);
@@ -34,6 +36,7 @@ public class Park {
         Rides ferrisWheel = new Rides("Big Zero", 0, 0, 10, true, 40);
         Rides[] rides = new Rides[]{teacup, carousel, ferrisWheel};
 
+        // create scanner and get info from use
         Scanner user = new Scanner(System.in);
         System.out.println("Welcome to the amusement park, what is your name? ");
         String name = user.nextLine();
@@ -44,11 +47,16 @@ public class Park {
         String Height = user.nextLine();
         int height = Integer.parseInt(Height);
         boolean stay = true;
+
+        // main code with a while loop that runs while you stay in the park
         while (stay){
+            // asks user what they want to do
             System.out.println("1. Go get food\n2. Go on a ride\nEnter the number of where you would like to go: ");
             String place = user.nextLine();
             Random generator = new Random();
             int randomIndex = generator.nextInt(3);
+
+            // based on the type of place the user wants to go asks for more specifics and takes them to a random place of that type
             if (place.equals("1")){
                 System.out.println("1. Go to a restaurant\n2. Go to a food stand\n Enter the number of the type of food place you would like to go to: ");
                 String food = user.nextLine();
@@ -71,6 +79,7 @@ public class Park {
                 if (ride.equals("1")){
                     System.out.println("We are going to go ride " + rollerCoasters[randomIndex].getName());
                     System.out.println(rollerCoasters[randomIndex]);
+                    // checks if user is old enough and tall enough for the ride
                     if (rollerCoasters[randomIndex].getHeightLimit() > height){
                         System.out.println("You are not tall enough to ride this, Sorry!");
                     }
@@ -84,6 +93,7 @@ public class Park {
                 else if (ride.equals("2")){
                     System.out.println("We are going to go ride " + waterRides[randomIndex].getName());
                     System.out.println(waterRides[randomIndex]);
+                    // checks if user is old enough and tall enough for the ride
                     if (waterRides[randomIndex].getHeightLimit() > height){
                         System.out.println("You are not tall enough to ride this, Sorry!");
                     }
@@ -97,6 +107,7 @@ public class Park {
                 else {
                     System.out.println("We are going to go ride " + rides[randomIndex].getName());
                     System.out.println(rides[randomIndex]);
+                    // checks if user is old enough and tall enough for the ride
                     if (rides[randomIndex].getHeightLimit() > height){
                         System.out.println("You are not tall enough to ride this, Sorry!");
                     }
@@ -108,6 +119,7 @@ public class Park {
                     }
                 }
             }
+            // checks if user wants to leave the park
             System.out.println("Enter 1 if you want to leave and any other number if you want to stay: ");
             String Stay = user.nextLine();
             if (Stay.equals("1")){

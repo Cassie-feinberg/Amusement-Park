@@ -18,7 +18,7 @@ public class FoodSpots {
 
     public FoodSpots() {
     }
-
+    // getters and setters for each variable
     public boolean isHasTables() {
         return hasTables;
     }
@@ -71,6 +71,11 @@ public class FoodSpots {
         this.name = name;
     }
 
+    // polymorphic method
+    public String welcome(){
+        return ("Welcome to " + name);
+    }
+
     public String toString(){
         return (name + " serves " + cuisine + " food, the price ranges from $" + cheapestItem + " to $" + mostExpensiveItem + ". It is open from " + hours + ". It has tables? " + hasTables);
     }
@@ -79,4 +84,10 @@ public class FoodSpots {
         return (item.length());
     }
 
+    // test code
+    public static void main(String[] args) {
+        FoodSpots bar = new FoodSpots("Twenty One", true, "bar", 3, 30, "9PM - 4AM");
+        System.out.println(bar);
+        System.out.println(bar.welcome());
+    }
 }
